@@ -29,8 +29,15 @@ public class BackReference {
         String patternStr = "(\\w+):\\/\\/([^/:]+)(:\\d*)?([^# ]*)";
         Pattern pattern = Pattern.compile(patternStr);
         Matcher matcher = pattern.matcher(url);
+
+        System.out.println(matcher.groupCount());
         while (matcher.find()) {
-            System.out.println(matcher.group());
+            int i = 0;
+            do {
+                System.out.println(matcher.group(i));
+                i++;
+            } while (i <= matcher.groupCount());
         }
+
     }
 }

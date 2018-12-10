@@ -24,7 +24,14 @@ public class MethodHandleTest {
     }
 
     private static MethodHandle getPrintlnMH(Object reveiver) throws Exception {
+        /**
+         * MethodType: 代表方法类型,包含了方法的返回值(第一个参数) 和具体参数
+         */
         MethodType mt = MethodType.methodType(void.class, String.class);
+        /**
+         * lookup()句的作用是在指定类中查找符合给定的方法名称 方法类型,并且符合调用权限的方法句柄
+         * bingTo()的作用其实就是相当于普通虚方法隐式传递的this对象
+         */
         return lookup().findVirtual(reveiver.getClass(), "println", mt).bindTo(reveiver);
     }
 }

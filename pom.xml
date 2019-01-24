@@ -12,6 +12,7 @@
         <module>jvm-practices</module>
         <module>jdk-practices</module>
         <module>algorithm</module>
+        <module>common-utils</module>
     </modules>
 
     <properties>

@@ -86,7 +86,7 @@ public class MinHeap {
      * @param k 需要调整的元素位置
      */
     private void shiftDown(int k) {
-        while (leftKidIndex(k) <= size) {
+        while (leftKidIndex(k) < size) {
             int smallerKidIndex = leftKidIndex(k);
             if (rightKidIndex(k) <= size
                     && data[smallerKidIndex] > data[rightKidIndex(k)]) {

@@ -13,6 +13,7 @@
         <module>jdk-practices</module>
         <module>algorithm</module>
         <module>common-utils</module>
+        <module>spring-practices</module>
     </modules>
 
     <properties>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="cd" class="com.jt61016.ocean.spring.springinaction.ch02.xmlconfig.SgtPeppers">
+        <constructor-arg value="suibian" />
+        <constructor-arg value="xx" />
+    </bean>
+
+    <bean id="player" class="com.jt61016.ocean.spring.springinaction.ch02.xmlconfig.CDPlayer">
+        <constructor-arg ref="cd"/>
+        <property name="brand" value="步步高" />
+    </bean>
+</beans>

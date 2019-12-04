@@ -14,12 +14,14 @@
         <module>algorithm</module>
         <module>common-utils</module>
         <module>spring-practices</module>
+        <module>spring-boot</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <lombok.version>1.12.2</lombok.version>
+        <jjwt.version>0.9.0</jjwt.version>
 
     </properties>
 
@@ -42,6 +44,12 @@
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjweaver</artifactId>
                 <version>1.8.6</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
